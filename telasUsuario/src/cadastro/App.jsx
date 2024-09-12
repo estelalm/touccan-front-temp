@@ -143,21 +143,21 @@ function App() {
         },
         body: JSON.stringify(dadosLimpos)
       })
-      .then(response => response.json())
-      .then(data => {
-        console.log("Sucesso:", data);
-        // Lógica adicional de sucesso, como redirecionamento
-      })
-      .catch((error) => {
-        console.error("Erro:", error);
-        // Lógica adicional de erro
-      });
+        .then(response => response.json())
+        .then(data => {
+          console.log("Sucesso:", data);
+          // Lógica adicional de sucesso, como redirecionamento
+        })
+        .catch((error) => {
+          console.error("Erro:", error);
+          // Lógica adicional de erro
+        });
     }
   };
 
   return (
     <div>
-      
+
       <div className='container'>
         <div className="decoracaoLaranja"></div>
         <div className="decoracaoCinza"></div>
@@ -167,7 +167,7 @@ function App() {
         </div>
 
       </div>
-      
+
       <div className="app-container">
         <h1>Cadastro</h1>
         <form onSubmit={handleSubmit}>
@@ -200,32 +200,32 @@ function App() {
                 <input type="date" name="data_nascimento" value={formData.data_nascimento} onChange={handleInputChange} />
                 {erros.data_nascimento && <p style={{ color: 'red' }}>{erros.data_nascimento}</p>}
               </div>
-             
 
-<div>
-<img src="./img/cep.png" alt="CEP" width={28} />
-<input type="text" name="cep" value={formData.cep} onChange={handleInputChange} placeholder=" " maxLength={9} />
-{erros.cep && <p style={{ color: 'red' }}>{erros.cep}</p>}
-</div>
-<div>
-<img src="./img/senha.png" alt="Senha" width={18} />
-<input type="password" name="senha" value={formData.senha} onChange={handleInputChange} placeholder="Senha" />
-{erros.senha && <p style={{ color: 'red' }}>{erros.senha}</p>}
-</div>
-<div>
-<img src="./img/senha.png" alt="Confirmar Senha" width={18} />
-<input type="password" name="confirmar_senha" value={formData.confirmar_senha} onChange={handleInputChange} placeholder="Confirmar Senha" />
-{erros.confirmar_senha && <p style={{ color: 'red' }}>{erros.confirmar_senha}</p>}
-</div>
-</div>
-</div>
-<button type="submit" style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#E25401', color: 'white', border: 'none', borderRadius: '5px' }}>
-Cadastrar
-</button>
-</form>
-</div>
-</div>
-);
+
+              <div>
+                <img src="./img/cep.png" alt="CEP" width={28} />
+                <input type="text" name="cep" value={formData.cep} onChange={handleInputChange} placeholder=" " maxLength={9} />
+                {erros.cep && <p style={{ color: 'red' }}>{erros.cep}</p>}
+              </div>
+              <div>
+                <img src="./img/senha.png" alt="Senha" width={18} />
+                <input type="password" name="senha" value={formData.senha} onChange={handleInputChange} placeholder="Senha" />
+                {erros.senha && <p style={{ color: 'red' }}>{erros.senha}</p>}
+              </div>
+              <div>
+                <img src="./img/senha.png" alt="Confirmar Senha" width={18} />
+                <input type="password" name="confirmar_senha" value={formData.confirmar_senha} onChange={handleInputChange} placeholder="Confirmar Senha" />
+                {erros.confirmar_senha && <p style={{ color: 'red' }}>{erros.confirmar_senha}</p>}
+              </div>
+            </div>
+          </div>
+          <button type="submit" style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#E25401', color: 'white', border: 'none', borderRadius: '5px' }}>
+            Cadastrar
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default App;
